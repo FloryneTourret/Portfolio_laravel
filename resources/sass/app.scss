@@ -1,0 +1,72 @@
+$blue : #3C454D;
+$pink: #DFA388;
+$black: #210B0B;
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* HEADER */
+#header{
+    height: 100vh;
+    .background_header{
+        height: 70vh;
+        width: 100%;
+        background-position: 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .uk-navbar-container:not(.uk-navbar-transparent){
+        background-color: $blue;
+        li{
+            a{
+                color: #fff;
+            }
+            &.uk-active{
+                a{
+                    color: $pink;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    .fixed_nav{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+    }
+}
+
+
+/* ABOUT */
+#about{
+    padding-top: 150px;
+    height: 100vh;
+}
+
+
+/* WEBSITES */
+#projects{
+    padding-top: 150px;
+    .project_card{
+        transition: .5s;
+        &:hover{
+            filter: grayscale(100%);
+        }
+    }
+}
+
+/* CONTACT */
+#contact{
+    padding-top: 150px;
+    height: 70vh;
+}
+
+
+/* FOOTER */
+.footer{
+    height: 30vh;
+    background-color: $blue;
+}
