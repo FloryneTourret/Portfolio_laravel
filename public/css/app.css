@@ -9,24 +9,13 @@ html {
 }
 
 #header .background_header {
-  height: 70vh;
+  height: 100vh;
   width: 100%;
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-#header .uk-navbar-container:not(.uk-navbar-transparent) {
-  background-color: #3C454D;
-}
-
-#header .uk-navbar-container:not(.uk-navbar-transparent) li a {
-  color: #fff;
-}
-
-#header .uk-navbar-container:not(.uk-navbar-transparent) li.uk-active a {
-  color: #DFA388;
-  font-weight: bold;
+  clip-path: polygon(0 100%, 0% 0%, 30% 0%, 80% 100%);
+  -webkit-clip-path: polygon(0 100%, 0% 0%, 30% 0%, 80% 100%);
 }
 
 #header .fixed_nav {
@@ -34,6 +23,49 @@ html {
   top: 0;
   width: 100%;
   z-index: 2;
+}
+
+#header .content_header {
+  position: absolute;
+  top: 0;
+  right: 50px;
+}
+
+#header .content_header img {
+  float: right;
+  margin-bottom: 50px;
+}
+
+#header .content_header .animate {
+  clear: both;
+  position: relative;
+  font-size: 4em;
+}
+
+#header .content_header .animate .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+#header .content_header .animate .text-wrapper .letters {
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+}
+
+#header .content_header .animate .letter {
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+  display: inline-block;
+  line-height: 1em;
+}
+
+#header .content_header .discover a {
+  float: right;
+  margin-top: 20vh;
 }
 
 /* ABOUT */

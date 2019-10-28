@@ -11,31 +11,56 @@ html {
 #header{
     height: 100vh;
     .background_header{
-        height: 70vh;
+        height: 100vh;
         width: 100%;
         background-position: 50% 50%;
         background-size: cover;
         background-repeat: no-repeat;
-    }
-    .uk-navbar-container:not(.uk-navbar-transparent){
-        background-color: $blue;
-        li{
-            a{
-                color: #fff;
-            }
-            &.uk-active{
-                a{
-                    color: $pink;
-                    font-weight: bold;
-                }
-            }
-        }
+        clip-path: polygon(0 100%, 0% 0%, 30% 0%, 80% 100%);
+        -webkit-clip-path: polygon(0 100%, 0% 0%, 30% 0%, 80% 100%);
     }
     .fixed_nav{
         position: fixed;
         top: 0;
         width: 100%;
         z-index: 2;
+    }
+    .content_header{
+        position: absolute;
+        top: 0;
+        right: 50px;
+        img{
+            float: right;
+            margin-bottom: 50px;
+        }
+        .animate {
+            clear: both;
+            position: relative;
+            font-size: 4em;
+            .text-wrapper {
+                position: relative;
+                display: inline-block;
+                padding-top: 0.2em;
+                padding-right: 0.05em;
+                padding-bottom: 0.1em;
+                overflow: hidden;
+                .letters {
+                    font-weight: 400;
+                    font-family: 'Lato', sans-serif;
+                }
+            }
+            .letter {
+                transform-origin: 50% 100%;
+                display: inline-block;
+                line-height: 1em;
+            }
+        }
+        .discover{
+            a{
+                float: right;
+                margin-top: 20vh;
+            }
+        }
     }
 }
 
@@ -70,3 +95,4 @@ html {
     height: 30vh;
     background-color: $blue;
 }
+
