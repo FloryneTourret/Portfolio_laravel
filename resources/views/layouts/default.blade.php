@@ -6,16 +6,14 @@
 <body>
 
     <div class="container">
-        @include('includes.navbar')
+        @include('includes.header')
 
         <div id="main">
             @yield('content')
         </div>
     </div>
 
-    <div class="footer">
-        @include('includes.footer')
-    </div>
+    @include('includes.footer')
     
 </body>
 </html>
